@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<!-- 
+
+
+
+
+
+
+-->
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>RealStudios - Home</title>
+        <meta name="description" content="AltEditor (beta)">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no, minimal-ui">
+        <!-- Call App Mode on ios devices -->
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <!-- Remove Tap Highlight on Windows Phone IE -->
+        <meta name="msapplication-tap-highlight" content="no">
+        <!-- base css -->
+        <link id="vendorsbundle" rel="stylesheet" media="screen, print" href="css/vendors.bundle.css">
+        <link id="appbundle" rel="stylesheet" media="screen, print" href="css/app.bundle.css">
+        <link id="appbundle" rel="stylesheet" media="screen, print" href="css/main.css">
+        <!-- Place favicon.ico in the root directory -->
+        <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+        <link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+        <link rel="stylesheet" href="https://cdn.plyr.io/3.7.2/plyr.css" />
+    </head>
+
+    <!-- BEGIN Body -->
+    <!-- Possible Classes
+
+		* 'header-function-fixed'         - header is in a fixed at all times
+		* 'nav-function-fixed'            - left panel is fixed
+		* 'nav-function-minify'			  - skew nav to maximize space
+		* 'nav-function-hidden'           - roll mouse on edge to reveal
+		* 'nav-function-top'              - relocate left pane to top
+		* 'mod-main-boxed'                - encapsulates to a container
+		* 'nav-mobile-push'               - content pushed on menu reveal
+		* 'nav-mobile-no-overlay'         - removes mesh on menu reveal
+		* 'nav-mobile-slide-out'          - content overlaps menu
+		* 'mod-bigger-font'               - content fonts are bigger for readability
+		* 'mod-high-contrast'             - 4.5:1 text contrast ratio
+		* 'mod-color-blind'               - color vision deficiency
+		* 'mod-pace-custom'               - preloader will be inside content
+		* 'mod-clean-page-bg'             - adds more whitespace
+		* 'mod-hide-nav-icons'            - invisible navigation icons
+		* 'mod-disable-animation'         - disables css based animations
+		* 'mod-hide-info-card'            - hides info card from left panel
+		* 'mod-lean-subheader'            - distinguished page header
+		* 'mod-nav-link'                  - clear breakdown of nav links
+
+		>>> more settings are described inside documentation page >>>
+	-->
+    <body class="mod-bg-1 mod-nav-link ">
+        <noscript>
+            <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work
+              properly without JavaScript enabled. Please enable it to
+              continue.</strong>
+        </noscript>
+        <!-- DOC: script to save and load page settings -->
+        
+        <!-- BEGIN Page Wrapper -->
+        <div id="app">
+
+            <div class="page-wrapper">
+
+                <div class="page-inner">
+                    <!-- BEGIN Left Aside -->
+                    <aside class="page-sidebar">
+                        
+                        <!-- BEGIN PRIMARY NAVIGATION -->
+            
+                            <div class="sidebar-wrapper">
+                                <div class="logo-wrapper">
+                                    <a href="index.html">
+                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="166" height="34" viewBox="0 0 166 34">
+                                            <image id="RS_Logo_1" data-name="RS Logo 1" width="166" height="34" xlink:href="data:img/png;base64,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"/>
+                                        </svg> 
+                                    </a>
+                                    <div class="main-navs">
+                                        <a href="what-we-do.html">What we do</a>
+                                        <a href="about-us.html">About us</a>
+                                        <a href="projects.html">projects</a>
+                                        <a href="impact.html">impact</a>
+                                        <a href="process.html">process</a>
+                                        <a href="careers.html">careers</a>
+                                        <a href="contact.html" class="active">contact</a>
+                                    </div>
+                                    <div class="contacts-wrapper">
+                                        <div class="d-flex justify-content-between mx-3" style="margin-bottom: 1.325rem;">
+                                            <svg id="RS_SPace" data-name="RS SPace" xmlns="http://www.w3.org/2000/svg" width="29" height="29" viewBox="0 0 29 29">
+                                                
+                                                <rect id="Rounded_Rectangle_1" data-name="Rounded Rectangle 1" class="cls-1" x="1" y="1" width="27" height="27" rx="6" ry="6"/>
+                                                <path class="cls-2" d="M46.626,761.4h0c-2.157-.882-2.749-1.493-2.749-2.987,0-.611.592-0.305,0.9-1.8,0-.645.626,0,0.626-1.494,0-.645-0.313-0.645-0.313-0.645a5.677,5.677,0,0,0,.313-1.493c0-.917-0.313-2.987-3.41-2.987s-3.41,2.07-3.41,2.987a5.679,5.679,0,0,0,.313,1.493s-0.313,0-.313.645c0,1.494.626,0.849,0.626,1.494,0.313,1.494.939,1.188,0.939,1.8,0,1.494-.626,2.105-2.783,2.987C35.214,762.015,34,762.9,34,763.509V765H50v-1.494c0-.611-1.218-1.494-3.375-2.105" transform="translate(-27 -743)"/>
+                                            </svg>
+                                            <svg id="App_Factory" data-name="App Factory" xmlns="http://www.w3.org/2000/svg" width="29" height="29" viewBox="0 0 29 29">
+                    
+                                                <rect id="Rounded_Rectangle_1_copy" data-name="Rounded Rectangle 1 copy" class="cls-1" x="1" y="1" width="27" height="27" rx="6" ry="6"/>
+                                                <path class="cls-2" d="M90.826,752.013H88.932c-1.119,0-1.936.328-1.936,1.437V755.3a1.8,1.8,0,0,0,1.936,1.808h1.893c1.162,0,1.549-.74,1.549-1.808V753.45c0-1.109-.387-1.437-1.549-1.437h0Zm7.228,0H96.161c-1.119,0-1.506.328-1.506,1.437V755.3c0,1.068.387,1.808,1.506,1.808h1.893A1.781,1.781,0,0,0,99.99,755.3V753.45c0-1.109-.775-1.437-1.936-1.437h0Zm-7.228,6.9H88.932A1.8,1.8,0,0,0,87,760.72v1.807c0,1.109.817,1.479,1.936,1.479h1.893c1.162,0,1.549-.37,1.549-1.479V760.72c0-1.068-.387-1.807-1.549-1.807h0Zm7.228,0H96.161c-1.119,0-1.506.739-1.506,1.807v1.807a1.238,1.238,0,0,0,1.506,1.479h1.893c1.162,0,1.936-.37,1.936-1.479V760.72a1.78,1.78,0,0,0-1.936-1.807h0Z" transform="translate(-79 -743)"/>
+                                            </svg>
+                                            <svg id="Privacy_policy" data-name="Privacy policy" xmlns="http://www.w3.org/2000/svg" width="29" height="29" viewBox="0 0 29 29">
+                                                <path class="cls-1" d="M137.547,751.111h6.5V757.2h-6.5v-6.088h0Zm0,7.31h6.5v6.088h-6.5v-6.088h0Zm1.294-2.435h3.907V752.32h-3.907v3.666h0Zm0,7.312h3.907v-3.665h-3.907V763.3h0Zm1.3-9.738h1.312v1.214h-1.312V753.56h0Zm0,7.286h1.312v1.23h-1.312v-1.23h0Zm11.7-3.647h-6.5v-6.088h6.5V757.2h0Zm-1.294,1.222h1.294v3.655h-3.909v-1.211h-1.292v3.644h-1.3v-6.088h3.88v1.212h1.322v-1.212h0Zm0-6.1h-3.907v3.665h3.907v-3.665h0Zm-1.322,2.452h-1.293V753.56h1.293v1.214h0Zm-1.293,8.524h1.293v1.211h-1.293V763.3h0Zm2.615,0h1.294v1.211h-1.294V763.3h0Z" transform="translate(-130 -743)"/>
+                                                <rect id="Rounded_Rectangle_1_copy_2" data-name="Rounded Rectangle 1 copy 2" class="cls-2" x="1" y="1" width="27" height="27" rx="6" ry="6"/>
+                                            </svg>
+                                        </div>
+                                        <p class="mb-0 text-center fw-800" style="font-size: 13.5px; font-weight: 600;">+233 (0)302 222 179</p>
+                                        <p class="mb-0 text-center fw-800" style="font-size: 13.5px; font-weight: 600;">+233 (0)555 212 020</p>
+                                    </div>
+                                </div>  
+                            </div>           
+            
+                        <!-- END PRIMARY NAVIGATION -->
+            
+                    </aside>
+                    <!-- END Left Aside -->
+                    <div class="page-content-wrapper">
+                       <!-- BEGIN Page Header -->
+                    <header class="page-header pl-lg-3 align-items-center hidden-lg-up" role="banner" >
+                        <!-- we need this logo when user switches to nav-function-top -->
+                        <div class="page-logo">
+                            <a href="#" class="page-logo-link press-scale-down d-flex align-items-center position-relative" data-toggle="modal" data-target="#modal-shortcut">
+                                <img src="img/logo.png" alt="SmartAdmin WebApp" aria-roledescription="logo">
+                                <span class="page-logo-text mr-1">SmartAdmin WebApp</span>
+                                <span class="position-absolute text-white opacity-50 small pos-top pos-right mr-2 mt-n2"></span>
+                                <i class="fal fa-angle-down d-inline-block ml-1 fs-lg color-primary-300"></i>
+                            </a>
+                        </div>
+                        <!-- <div class="hidden-md-down p-0 mr-3">
+                            <a href="#" class="d-flex align-items-center justify-content-center position-relative">
+                                <img src="/img/GKB_Logo.png" alt="Ghana Knowledge Bank" aria-roledescription="logo">
+                                
+                                <span class="position-absolute text-white opacity-50 small pos-top pos-right mr-2 mt-n2"></span>
+                                
+                            </a>
+                        </div> -->
+                        <!-- DOC: nav menu layout change shortcut -->
+                        
+                        <!-- DOC: mobile button appears during mobile width -->
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="166" height="34" viewBox="0 0 166 34">
+                            <image id="RS_Logo_1" data-name="RS Logo 1" width="166" height="34" xlink:href="data:img/png;base64,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"/>
+                        </svg> 
+                        
+                        <div class="ml-auto d-flex align-items-center">
+                            <div class="hidden-lg-up">
+                                <a href="#" class="header-btn btn press-scale-down" data-action="toggle" data-class="mobile-nav-on">
+                                    <i class="ni ni-menu"></i>
+                                </a>
+                            </div>
+                            <!-- activate app search icon (mobile) -->
+            
+                            <!-- <div class="hidden-sm-up">
+                                <a href="#" class="header-icon" data-action="toggle" data-class="mobile-search-on" data-focus="search-field" title="Search">
+                                    <i class="fal fa-search"></i>
+                                </a>
+                            </div> -->
+                            <!-- app message -->
+            
+                            
+                            <!-- app message -->
+            
+            
+                        
+                            <!-- app shortcut -->
+                            <div>
+                                <!-- <a href="#" class="header-icon" data-toggle="dropdown" title="My Apps">
+                                    <img src="/img/app-launcher-icon.svg" style="width: 21px; height: 21px;">
+                                </a> -->
+                                <div class="dropdown-menu dropdown-menu-animated w-auto h-auto">
+                                    <div class="dropdown-header bg-trans-gradient d-flex justify-content-center align-items-center rounded-top">
+                                        <h4 class="m-0 text-center color-white">
+                                            GKB Tools
+                                            <small class="mb-0 opacity-80">User Applications & Addons</small>
+                                        </h4>
+                                    </div>
+                                    <div class="custom-scroll h-100">
+                                        <ul class="app-list">
+                                            <li>
+                                                <a href="#" class="app-list-item hover-white">
+                                                    <span class="icon-stack">
+                                                        <i class="base-2 icon-stack-3x color-primary-600"></i>
+                                                        <i class="base-3 icon-stack-2x color-primary-700"></i>
+                                                        <i class="ni ni-settings icon-stack-1x text-white fs-lg"></i>
+                                                    </span>
+                                                    <span class="app-list-name">
+                                                        Services
+                                                    </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="app-list-item hover-white">
+                                                    <span class="icon-stack">
+                                                        <i class="base-2 icon-stack-3x color-primary-400"></i>
+                                                        <i class="base-10 text-white icon-stack-1x"></i>
+                                                        <i class="ni md-profile color-primary-800 icon-stack-2x"></i>
+                                                    </span>
+                                                    <span class="app-list-name">
+                                                        Account
+                                                    </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="app-list-item hover-white">
+                                                    <span class="icon-stack">
+                                                        <i class="base-9 icon-stack-3x color-success-400"></i>
+                                                        <i class="base-2 icon-stack-2x color-success-500"></i>
+                                                        <i class="ni ni-shield icon-stack-1x text-white"></i>
+                                                    </span>
+                                                    <span class="app-list-name">
+                                                        Wallet
+                                                    </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="app-list-item hover-white">
+                                                    <span class="icon-stack">
+                                                        <i class="base-18 icon-stack-3x color-info-700"></i>
+                                                        <span class="position-absolute pos-top pos-left pos-right color-white fs-md mt-2 fw-400">28</span>
+                                                    </span>
+                                                    <span class="app-list-name">
+                                                        Calendar
+                                                    </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="app-list-item hover-white">
+                                                    <span class="icon-stack">
+                                                        <i class="base-7 icon-stack-3x color-info-500"></i>
+                                                        <i class="base-7 icon-stack-2x color-info-700"></i>
+                                                        <i class="ni ni-graph icon-stack-1x text-white"></i>
+                                                    </span>
+                                                    <span class="app-list-name">
+                                                        Stats
+                                                    </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="app-list-item hover-white">
+                                                    <span class="icon-stack">
+                                                        <i class="base-4 icon-stack-3x color-danger-500"></i>
+                                                        <i class="base-4 icon-stack-1x color-danger-400"></i>
+                                                        <i class="ni ni-envelope icon-stack-1x text-white"></i>
+                                                    </span>
+                                                    <span class="app-list-name">
+                                                        Messages
+                                                    </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="app-list-item hover-white">
+                                                    <span class="icon-stack">
+                                                        <i class="base-4 icon-stack-3x color-fusion-400"></i>
+                                                        <i class="base-5 icon-stack-2x color-fusion-200"></i>
+                                                        <i class="base-5 icon-stack-1x color-fusion-100"></i>
+                                                        <i class="fal fa-keyboard icon-stack-1x color-info-50"></i>
+                                                    </span>
+                                                    <span class="app-list-name">
+                                                        Notes
+                                                    </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="app-list-item hover-white">
+                                                    <span class="icon-stack">
+                                                        <i class="base-16 icon-stack-3x color-fusion-500"></i>
+                                                        <i class="base-10 icon-stack-1x color-primary-50 opacity-30"></i>
+                                                        <i class="base-10 icon-stack-1x fs-xl color-primary-50 opacity-20"></i>
+                                                        <i class="fal fa-dot-circle icon-stack-1x text-white opacity-85"></i>
+                                                    </span>
+                                                    <span class="app-list-name">
+                                                        Photos
+                                                    </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="app-list-item hover-white">
+                                                    <span class="icon-stack">
+                                                        <i class="base-19 icon-stack-3x color-primary-400"></i>
+                                                        <i class="base-7 icon-stack-2x color-primary-300"></i>
+                                                        <i class="base-7 icon-stack-1x fs-xxl color-primary-200"></i>
+                                                        <i class="base-7 icon-stack-1x color-primary-500"></i>
+                                                        <i class="fal fa-globe icon-stack-1x text-white opacity-85"></i>
+                                                    </span>
+                                                    <span class="app-list-name">
+                                                        Maps
+                                                    </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="app-list-item hover-white">
+                                                    <span class="icon-stack">
+                                                        <i class="base-5 icon-stack-3x color-success-700 opacity-80"></i>
+                                                        <i class="base-12 icon-stack-2x color-success-700 opacity-30"></i>
+                                                        <i class="fal fa-comment-alt icon-stack-1x text-white"></i>
+                                                    </span>
+                                                    <span class="app-list-name">
+                                                        Chat
+                                                    </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="app-list-item hover-white">
+                                                    <span class="icon-stack">
+                                                        <i class="base-5 icon-stack-3x color-warning-600"></i>
+                                                        <i class="base-7 icon-stack-2x color-warning-800 opacity-50"></i>
+                                                        <i class="fal fa-phone icon-stack-1x text-white"></i>
+                                                    </span>
+                                                    <span class="app-list-name">
+                                                        Phone
+                                                    </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="app-list-item hover-white">
+                                                    <span class="icon-stack">
+                                                        <i class="base-6 icon-stack-3x color-danger-600"></i>
+                                                        <i class="fal fa-chart-line icon-stack-1x text-white"></i>
+                                                    </span>
+                                                    <span class="app-list-name">
+                                                        Projects
+                                                    </span>
+                                                </a>
+                                            </li>
+                                            <li class="w-100">
+                                                <a href="#" class="btn btn-default mt-4 mb-2 pr-5 pl-5"> Add more apps </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                    <!-- app notification -->
+                                            
+                        </div>
+                    </header>
+            <!-- END Page Header -->
+            
+                    <!-- BEGIN Page Content -->
+                    <!-- the #js-page-content id is needed for some plugins to initialize -->
+                    <main id="js-page-content" role="main" class="page-content">
+            
+                        
+                        <div class="contact-wrapper">
+                            <div class="page-hero">
+                                <div class="page-hero-image">
+                        
+                                </div>
+                            </div>
+                              <h1 class="main-header px-3 px-lg-0" style="margin-top: 2.75rem;">
+                                  Contact.
+                              </h1>
+                                <div class="page-separator" style="margin-bottom: 2rem;"></div>
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <p class="fw-700">Say hello: </p>
+                                            <a href="#" class="link-style">hello@rslabspace.com</a>
+                                            <p class="" style="margin-bottom: 0.25rem; margin-top: 0.25rem">+233 (0)302 222 179</p>
+                                            <p class="">+233 (0)302 212 020</p>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <p class="fw-700">Job Application: </p>
+                                            <a href="#" class="link-style">hr@realstudiosonline.com</a>
+                                            <br>
+                                            <router-link to="/careers" class="link-style">view openings</router-link>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <p class="fw-700">Address: </p>
+                                            <p class="" style="margin-bottom: 0.25rem; margin-top: 0.25rem">Obonu Street, Adodo hotel Premises</p>
+                                            <p class="" style="margin-bottom: 0.25rem; margin-top: 0.25rem">North-Kaneshie, Accra Ghana</p>
+                                            <p class="" style="margin-bottom: 0.25rem; margin-top: 0.25rem">GA-308-4711</p>
+                                            <a href="#" class="link-style">Map</a>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <p class="fw-700">Follow Us: </p>
+                                            <a href="#" class="link-style">Linked</a>
+                                            <br>
+                                            <a href="#" class="link-style">Github</a>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                        </div>
+                        
+                    </main>
+            
+                    
+                        
+                    <!-- this overlay is activated only when mobile menu is triggered -->
+                    <div class="page-content-overlay" data-action="toggle" data-class="mobile-nav-on"></div> <!-- END Page Content -->
+                    
+                    <!-- BEGIN Shortcuts -->
+                    <div class="modal fade modal-backdrop-transparent" id="modal-shortcut" tabindex="-1" role="dialog" aria-labelledby="modal-shortcut" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-top modal-transparent" role="document">
+                            <div class="modal-content">
+                                <div class="modal-body">
+                                    <ul class="app-list w-auto h-auto p-0 text-left">
+                                        <li>
+                                            <a href="intel_introduction.html" class="app-list-item text-white border-0 m-0">
+                                                <div class="icon-stack">
+                                                    <i class="base base-7 icon-stack-3x opacity-100 color-primary-500 "></i>
+                                                    <i class="base base-7 icon-stack-2x opacity-100 color-primary-300 "></i>
+                                                    <i class="fal fa-home icon-stack-1x opacity-100 color-white"></i>
+                                                </div>
+                                                <span class="app-list-name">
+                                                    Home
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="page_inbox_general.html" class="app-list-item text-white border-0 m-0">
+                                                <div class="icon-stack">
+                                                    <i class="base base-7 icon-stack-3x opacity-100 color-success-500 "></i>
+                                                    <i class="base base-7 icon-stack-2x opacity-100 color-success-300 "></i>
+                                                    <i class="ni ni-envelope icon-stack-1x text-white"></i>
+                                                </div>
+                                                <span class="app-list-name">
+                                                    Inbox
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="intel_introduction.html" class="app-list-item text-white border-0 m-0">
+                                                <div class="icon-stack">
+                                                    <i class="base base-7 icon-stack-2x opacity-100 color-primary-300 "></i>
+                                                    <i class="fal fa-plus icon-stack-1x opacity-100 color-white"></i>
+                                                </div>
+                                                <span class="app-list-name">
+                                                    Add More
+                                                </span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                        <!-- END Shortcuts -->
+                        <!-- BEGIN Color profile -->
+                        <!-- this area is hidden and will not be seen on screens or screen readers -->
+                        <!-- we use this only for CSS color refernce for JS stuff -->
+                        <p id="js-color-profile" class="d-none">
+                            <span class="color-primary-50"></span>
+                            <span class="color-primary-100"></span>
+                            <span class="color-primary-200"></span>
+                            <span class="color-primary-300"></span>
+                            <span class="color-primary-400"></span>
+                            <span class="color-primary-500"></span>
+                            <span class="color-primary-600"></span>
+                            <span class="color-primary-700"></span>
+                            <span class="color-primary-800"></span>
+                            <span class="color-primary-900"></span>
+                            <span class="color-info-50"></span>
+                            <span class="color-info-100"></span>
+                            <span class="color-info-200"></span>
+                            <span class="color-info-300"></span>
+                            <span class="color-info-400"></span>
+                            <span class="color-info-500"></span>
+                            <span class="color-info-600"></span>
+                            <span class="color-info-700"></span>
+                            <span class="color-info-800"></span>
+                            <span class="color-info-900"></span>
+                            <span class="color-danger-50"></span>
+                            <span class="color-danger-100"></span>
+                            <span class="color-danger-200"></span>
+                            <span class="color-danger-300"></span>
+                            <span class="color-danger-400"></span>
+                            <span class="color-danger-500"></span>
+                            <span class="color-danger-600"></span>
+                            <span class="color-danger-700"></span>
+                            <span class="color-danger-800"></span>
+                            <span class="color-danger-900"></span>
+                            <span class="color-warning-50"></span>
+                            <span class="color-warning-100"></span>
+                            <span class="color-warning-200"></span>
+                            <span class="color-warning-300"></span>
+                            <span class="color-warning-400"></span>
+                            <span class="color-warning-500"></span>
+                            <span class="color-warning-600"></span>
+                            <span class="color-warning-700"></span>
+                            <span class="color-warning-800"></span>
+                            <span class="color-warning-900"></span>
+                            <span class="color-success-50"></span>
+                            <span class="color-success-100"></span>
+                            <span class="color-success-200"></span>
+                            <span class="color-success-300"></span>
+                            <span class="color-success-400"></span>
+                            <span class="color-success-500"></span>
+                            <span class="color-success-600"></span>
+                            <span class="color-success-700"></span>
+                            <span class="color-success-800"></span>
+                            <span class="color-success-900"></span>
+                            <span class="color-fusion-50"></span>
+                            <span class="color-fusion-100"></span>
+                            <span class="color-fusion-200"></span>
+                            <span class="color-fusion-300"></span>
+                            <span class="color-fusion-400"></span>
+                            <span class="color-fusion-500"></span>
+                            <span class="color-fusion-600"></span>
+                            <span class="color-fusion-700"></span>
+                            <span class="color-fusion-800"></span>
+                            <span class="color-fusion-900"></span>
+                        </p>
+                        <!-- END Color profile -->
+                    </div>
+                    
+                </div>
+            
+                
+            
+            
+            
+            </div>
+        </div>
+        
+        <!-- datatable start -->
+        
+        <!-- datatable end -->
+        <!-- END Page Wrapper -->
+        <!-- BEGIN Quick Menu -->
+        <!-- to add more items, please make sure to change the variable '$menu-items: number;' in your _page-components-shortcut.scss -->
+      
+        <!-- END Quick Menu -->
+        <!-- BEGIN Messenger -->
+        
+        <!-- END Messenger -->
+        <!-- BEGIN Page Settings -->
+        <!-- END Page Settings -->
+        <script src="js/vendors.bundle.js"></script>
+        <script src="js/app.bundle.js"></script>
+        <!-- <script src="js/plyr/plyr.js" defer></script>
+        <script src="js/plyr/ui_media-player.js" defer></script> -->
+        
+        <script type="text/javascript">
+          
+        </script>
+
+    </body>
+    <!-- END Body -->
+</html>

@@ -1,0 +1,17 @@
+<svg id="Privacy_policy" data-name="Privacy policy" xmlns="http://www.w3.org/2000/svg" width="29" height="29" viewBox="0 0 29 29">
+  <defs>
+    <style>
+      .cls-1 {
+        fill-rule: evenodd;
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #000;
+        stroke-width: 2px;
+      }
+    </style>
+  </defs>
+  <path class="cls-1" d="M137.547,751.111h6.5V757.2h-6.5v-6.088h0Zm0,7.31h6.5v6.088h-6.5v-6.088h0Zm1.294-2.435h3.907V752.32h-3.907v3.666h0Zm0,7.312h3.907v-3.665h-3.907V763.3h0Zm1.3-9.738h1.312v1.214h-1.312V753.56h0Zm0,7.286h1.312v1.23h-1.312v-1.23h0Zm11.7-3.647h-6.5v-6.088h6.5V757.2h0Zm-1.294,1.222h1.294v3.655h-3.909v-1.211h-1.292v3.644h-1.3v-6.088h3.88v1.212h1.322v-1.212h0Zm0-6.1h-3.907v3.665h3.907v-3.665h0Zm-1.322,2.452h-1.293V753.56h1.293v1.214h0Zm-1.293,8.524h1.293v1.211h-1.293V763.3h0Zm2.615,0h1.294v1.211h-1.294V763.3h0Z" transform="translate(-130 -743)"/>
+  <rect id="Rounded_Rectangle_1_copy_2" data-name="Rounded Rectangle 1 copy 2" class="cls-2" x="1" y="1" width="27" height="27" rx="6" ry="6"/>
+</svg>

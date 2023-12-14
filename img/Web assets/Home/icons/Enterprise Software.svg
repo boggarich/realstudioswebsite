@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="45" height="30" viewBox="0 0 45 30">
+  <defs>
+    <style>
+      .cls-1 {
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="Enterprise_Software" data-name="Enterprise Software" class="cls-1" d="M509.488,1939.05h0a2.805,2.805,0,0,0-2.353.82c-0.815-4.85-5.614-8.87-11.229-8.87a12.384,12.384,0,0,0-12.044,12.07v1.65h-0.813a8.087,8.087,0,0,0-8.06,8.05c0,4.11,4.075,8.23,8.06,8.23h11.227v-8.97h-4.8l8.06-10.51,7.967,10.51h-4.8V1961h8.783c5.616,0,10.5-4.85,10.5-11.44a10.719,10.719,0,0,0-10.5-10.51" transform="translate(-475 -1931)"/>
+</svg>
